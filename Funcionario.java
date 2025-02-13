@@ -1,28 +1,30 @@
 package Q02;
-
 public class Funcionario {
     private String nome;
     private double salario;
 
-    public Funcionario(String nome,double salario){
+    public Funcionario(String nome, double salario) {
         this.nome = nome;
         this.salario = salario;
     }
-    public String getNome(){
+
+    public String getNome() {
         return nome;
     }
-    public void setNome(String nome){
+
+    public void setNome(String nome) {
         this.nome = nome;
     }
-    public double getSalario(){
+
+    public double getSalario() {
         return salario;
     }
 
-    public double setSalario( double salario){
+    public void setSalario(double salario) {
         this.salario = salario;
     }
 
-    public void calcularSalario(){
+    public double calcularSalario() {
         return salario;
     }
 }
@@ -42,12 +44,13 @@ class Gerente extends Funcionario {
     }
 }
 
+
 class Main {
     public static void main(String[] args) {
         Funcionario funcionario = new Funcionario("Joana", 2222);
-        Gerente gerente = new Gerente("Kailane", 12344, 98383);
+        Gerente gerente = new Gerente("Kailane", 2222, 500);
 
-        System.out.println(funcionario.getNome() + funcionario.getSalario());
-        System.out.println(gerente.getNome() + gerente.calcularSalario());
+        System.out.println(funcionario.getNome() + " " + funcionario.getSalario());
+        System.out.println(gerente.getNome() + " " + gerente.calcularSalario());
     }
 }
